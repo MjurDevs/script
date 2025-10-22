@@ -17,7 +17,7 @@ G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[StarterUi]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
-G2L["1"]["DisplayOrder"] = math.huge;
+G2L["1"]["DisplayOrder"] = 100000;
 
 
 -- StarterGui.StarterUi.Main
@@ -3190,8 +3190,6 @@ local script = G2L["61"];
 	-- =======================
 	local function createHighlights(character)
 		local highlights = {}
-		for _, part in pairs(character:GetDescendants()) do
-			if part:IsA("BasePart") then
 				local h = Instance.new("Highlight")
 				if STeams == true and game.Players:GetPlayerFromCharacter(character).Team == game.Players.LocalPlayer.Team then
 					h.FillColor = Color3.fromRGB(0,255,0)
@@ -3201,13 +3199,10 @@ local script = G2L["61"];
 				h.FillTransparency = 0.5
 				h.OutlineTransparency = 0
 				h.OutlineColor = Color3.new(0,0,0)
-				h.Adornee = part
-				h.Parent = part
+				h.Adornee = character
+				h.Parent = character
 				h.Enabled = ShowHighlights
 				table.insert(highlights, h)
-			end
-		end
-		activeHighlights[character] = highlights
 	end
 	
 	local function destroyHighlights(character)
